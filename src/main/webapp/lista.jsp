@@ -65,6 +65,7 @@
             		</c:forEach>
             	</tbody>
             </table>
+            <h5><a href="index.jsp">Voltar para o Cadastro de Usuários</a></h5>
         </div>
       </div>
     </div >

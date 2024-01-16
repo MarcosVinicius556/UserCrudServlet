@@ -1,7 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>User CRUD - HOME</title>
+    <title>User CRUD - Atualizar Usuário</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
@@ -32,33 +35,33 @@
       <div class="row">
         <div class="cold-md-7">
             <hr>
-            <h3>Cadastro de usuarios</h3>  
+            <h3>Atualizar Usuario</h3>  
             <hr>
-            <form action="CreateAndFind" method="post">
+            <form action="UserUpdate" method="post">
+              <input value="${user.id}" name="id" disabled="disabled">
               <div class="form-floating mb-3">
-                  <input name="nome" maxlength="40" type="text" class="form-control" id="floatingInput1"> 
+                  <input value="${user.nome}" name="nome" maxlength="40" type="text" class="form-control" id="floatingInput1"> 
                   <label>Nome completo</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input name="cpf" maxlength="11" type="text" class="form-control"> 
+                  <input value="${user.cpf}" name="cpf" maxlength="11" type="text" class="form-control"> 
                   <label>CPF (apenas nÃºmeros)</label>
                 </div>
                 <div class="form-floating mb-3">
-                  <input name="nascimento" type="date" class="form-control" placeholder="Nascimento">
+                  <input value="${user.nascimento}" name="nascimento" type="date" class="form-control" placeholder="Nascimento">
                   <label>Nascimento</label>
                 </div>
                 <select name="situacao" class="form-select mb-3" aria-label="Default select example">
-                  <option value="Inativo" selected>-- Selecione a situacao</option>
+                  <option value="Inativo" selected>-- Selecione uma opção</option>
                   <option value="Ativo">Ativo</option>
                   <option value="Inativo">Inativo</option>
                 </select>
       
-                <button class="btn btn-primary" type="submit">Cadastrar Usuario</button>
+                <button class="btn btn-success" type="submit">Atualizar Usuario</button>
                 <button class="btn btn-secondary" type="reset">Limpar
                   Formulario</button>
             </form>
             <br />
-        	<h5><a href="CreateAndFind">Lista de Usuários</a></h5>
         </div>
       </div>
     </div >
