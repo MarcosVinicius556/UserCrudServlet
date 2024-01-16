@@ -17,10 +17,10 @@
             <a class="nav-link active" aria-current="page" href="index.jsp">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Lista de Usuarios</a>
+            <a class="nav-link" href="CreateAndFind">Lista de Usuarios</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form action="CreateAndFind" method="get" class="d-flex" role="search">
           <input name="pesquisa" class="form-control me-2" type="search" placeholder="Digite o nome ou CPF" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
@@ -34,7 +34,7 @@
             <hr>
             <h3>Cadastro de usuarios</h3>  
             <hr>
-            <form action="CreateAndFind" method="POST">
+            <form action="CreateAndFind" method="post">
               <div class="form-floating mb-3">
                   <input name="nome" maxlength="40" type="text" class="form-control" id="floatingInput1"> 
                   <label>Nome completo</label>
@@ -53,10 +53,9 @@
                   <option value="Inativo">Inativo</option>
                 </select>
       
-                <button class="btn btn-primary" type="submit">Cadastrar
-                  Usuário</button>
+                <button class="btn btn-primary" type="submit">Cadastrar Usuario</button>
                 <button class="btn btn-secondary" type="reset">Limpar
-                  Formulário</button>
+                  Formulario</button>
             </form>
         </div>
       </div>
